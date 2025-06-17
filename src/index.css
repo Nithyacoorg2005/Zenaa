@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Outfit', sans-serif;
+}
+
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9FAFB;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --theme-primary: #3B82F6;
+  --theme-secondary: #10B981;
+  --theme-accent: #F59E0B;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme-specific styles */
+.theme-dark {
+  --bg-primary: #1F2937;
+  --bg-secondary: #374151;
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+}
+
+.theme-nature {
+  --bg-primary: #F0FDF4;
+  --bg-secondary: #DCFCE7;
+  --text-primary: #14532D;
+  --text-secondary: #166534;
+  --theme-primary: #10B981;
+}
+
+.theme-sunset {
+  --bg-primary: #FEF3C7;
+  --bg-secondary: #FDE68A;
+  --text-primary: #92400E;
+  --text-secondary: #B45309;
+  --theme-primary: #F59E0B;
+}
+
+.theme-ocean {
+  --bg-primary: #EFF6FF;
+  --bg-secondary: #DBEAFE;
+  --text-primary: #1E3A8A;
+  --text-secondary: #1D4ED8;
+  --theme-primary: #3B82F6;
+}
+
+.theme-auto {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9FAFB;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --theme-primary: #6366F1;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-secondary);
+}
